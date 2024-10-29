@@ -5,6 +5,7 @@
 #define MAN 4
 #define HAND 5
 
+// Keep track of button state
 int MPress = 0;
 int MRelease = 0;
 int HPress = 0;
@@ -36,6 +37,12 @@ void loop() {
 Dabble.processInput();  // This line is crucial in grabbing our data  
 
   if (GamePad.isSelectPressed()) { reset(); }
+
+  // CIRCLE -> Toggle man
+  // SQUARE -> Toggle hand
+  // TRIANGLE -> Toggle both
+  // CROSS -> Turn off both
+  // SELECT -> Turn off both
 
   if (GamePad.isCirclePressed() || GamePad.isTrianglePressed())       
   {
