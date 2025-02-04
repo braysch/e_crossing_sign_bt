@@ -64,8 +64,6 @@ Dabble.processInput();  // This line is crucial in grabbing our data
   }
   if (GamePad.isCrossPressed())
   {
-    digitalWrite(MAN, 1);
-    digitalWrite(HAND, 1);
-    MPress, MRelease, HPress, HRelease = 0;  
+    reset();
   }
 }
